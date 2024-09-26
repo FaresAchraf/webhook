@@ -1,9 +1,9 @@
 {
   "name": "messenger-webhook",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "original.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node original.js"
   },
   "keywords": [],
   "author": "",
