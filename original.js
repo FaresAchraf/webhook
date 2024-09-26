@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 // Replace with your verification token
 const VERIFY_TOKEN = 'potatoai';
-const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN || 'EAAPU64ObztsBOwI4CG0AAE8YLWSZBJlstSk9w6g3n3nx9N7FXOFbtJ4kW2zrjDltgThSn8bP9u02atWGdODtXMAwBkmTw5xJ2AjsRXZCoduxKurxRnyJI9jvXaZCee27aIioZCr7WQZC4x4buWmUXZB9ygQGApHwZCapi9cPNB4ybgHJm4tmowDZBYe5ZCiy63b063592jijcVZCiuMVT3RgZDZD'; // Add your page access token here
+const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN || 'EAAPU64ObztsBO3o5TekiaEsV9Vhvpm1C5c3h0Lab6ZCucTJF1viQ5ZCS7vLAsMsN0RCQzChnwj4CDwDWTYF95XC9rsCWpgjHbv3BbIZBYuebFSuARELAse00aQ0ZAr2ZBIcuZBS9ZBH8kmQbQ5ritltNkqxHeKF6ZCx6qSXTlRQxchLQE7MG8ZCG11hQWhXpDldB0ZCLo0LRLEAkb44GfChVoYLemY'; // Add your page access token here
 
 app.get('/webhook', (req, res) => {
   const mode = req.query['hub.mode'];
@@ -75,7 +75,7 @@ function sendMessage(sender_psid, response) {
   };
 
   axios({
-    url: `https://graph.facebook.com/v12.0/me/messages?access_token=${PAGE_ACCESS_TOKEN}`,
+    url: `https://graph.facebook.com/v12.0/me/conversations/messages?access_token=${PAGE_ACCESS_TOKEN}`,
     method: 'POST',
     data: request_body
   })
