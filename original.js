@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 // Replace with your verification token
 const VERIFY_TOKEN = 'potatoai';
-const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN || 'EAAPU64ObztsBO3o5TekiaEsV9Vhvpm1C5c3h0Lab6ZCucTJF1viQ5ZCS7vLAsMsN0RCQzChnwj4CDwDWTYF95XC9rsCWpgjHbv3BbIZBYuebFSuARELAse00aQ0ZAr2ZBIcuZBS9ZBH8kmQbQ5ritltNkqxHeKF6ZCx6qSXTlRQxchLQE7MG8ZCG11hQWhXpDldB0ZCLo0LRLEAkb44GfChVoYLemY'; // Add your page access token here
+const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN || 'EAAPU64ObztsBO4vMUEoZB5ikLNhi2DueECdpIIyIaU1olVmWZCIldkl3PLEuH95tiOa9YMVFpar96jA30FNNyN9k4luEM7F2Tzheup4Q6pVZBlEdTcIFV4m2ZARwhrzF8UGNIgYTmtdZALfBMBZCKDuQDO2fwTILJhuCCMUlLZCNG0Wnk7IjWE2XkeMvc05KrLwJhs9KtJ4DidszuvHQQZDZD'; // Add your page access token here
 
 app.get('/webhook', (req, res) => {
   const mode = req.query['hub.mode'];
